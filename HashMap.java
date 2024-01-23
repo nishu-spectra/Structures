@@ -20,12 +20,17 @@ class Custom_HashMap<K,V> // generic
 	}
 	int n; //no. of nodes
 	int N; // no. of buckets
+
     LinkedList<Node>[] buckets; // N= buckets.length
+	@SuppressWarnings ("unchecked")
     public Custom_HashMap()
     {
     	this.n=0;
     	this.N= 4;
-    	this.buckets=  new LinkedList[N];
+		
+			this.buckets=  new LinkedList[N];
+		
+    	
     	for(int i=0;i<buckets.length;i++)
     	{
     		this.buckets[i]= new LinkedList<>(); // to create empty or null linked list
@@ -57,9 +62,11 @@ class Custom_HashMap<K,V> // generic
     
     /*if the value of lambda is more than the specified value, rehash
      *for new lambda value i.e new number of bucket or array size*/
+	@SuppressWarnings ("unchecked")
     private void rehash()
     {
     	LinkedList<Node> oldbuckets[] = buckets;
+		
     	buckets= new LinkedList[2*N];
     	
     	for(int i=0;i<2*N;i++)
