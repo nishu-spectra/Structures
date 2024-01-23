@@ -407,7 +407,7 @@ class Custom_HashMap<K,V> // generic
     	return sb.toString();
     }
 }
-public class HashMap {
+public class HashMap_Structure {
     public static void main(String[]args)
     {
        
