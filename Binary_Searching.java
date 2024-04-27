@@ -2,7 +2,7 @@ package Structures;
 import java.util.Scanner;
 class BinarySearch
 {
-	int BinarySearch(int array[], int searchValue)
+	int Search(int array[], int searchValue)
 	{
 		int front =0;
 		int rear= array.length-1;	
@@ -34,7 +34,7 @@ public class Binary_Searching
 		int s= obj.nextInt();
 		int array[]= {10,12,13,23,90,98,101};
 		
-		int result = bs.BinarySearch(array, s);
+		int result = bs.Search(array, s);
 		if(result==-1)
 		{
 			System.out.println(s+" is not found.");
@@ -43,5 +43,6 @@ public class Binary_Searching
 		{
 			System.out.println(s+" is found at index ["+result+"]");
 		}
+		obj.close();
 	}
 }
