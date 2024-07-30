@@ -16,12 +16,13 @@ class DFS_Stack
 	{
 		boolean visited[]= new boolean[numVertices];
     	Stack<Integer> stack = new Stack<>();
-    	stack.push(sourceVertex);
+    	stack.push(sourceVertex); //push the sourceNode into the stack
     	while(stack.isEmpty()==false)
     	{
-    		sourceVertex=stack.pop();
-    		visited[sourceVertex]=true;
-    		System.out.print(sourceVertex+" ");
+    		sourceVertex=stack.pop(); // pop out an element from the stack
+    		visited[sourceVertex]=true; // mark the popped element as visited
+    		System.out.print(sourceVertex+" "); // print the visited vertex
+            //check for the child nodes of the visited node and push the child vertex into the stack if not visited
     		for(int i=0;i<numVertices;i++)
     		{
     			if(adjacencyMatrix[sourceVertex][i]==1 && visited[i]==false)
