@@ -11,7 +11,7 @@ class BFS{
         this.numVertices = adjacencyMatrix.length;
     }
    // method for performing Breadth First Search
-    void BFS(int sourceVertex)
+    void bfs(int sourceVertex)
     {
         boolean visited[] = new boolean[numVertices];
         Queue<Integer> queue = new LinkedList<Integer>(); // initializing queue
@@ -45,7 +45,7 @@ public class BreadthFirstSearch {
         {1, 1, 0, 1},
         {0, 0, 1, 0}};
         BFS bfs = new BFS(adjacencyMatrix);
-        bfs.BFS(3);
+        bfs.bfs(3);
     }
     
 }
